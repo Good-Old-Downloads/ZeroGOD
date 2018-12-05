@@ -1,0 +1,310 @@
+<!--
+	ZeroGod
+	Copyright (C) 2018  GoodOldDownloads
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+              ZeroGod
+ ________________   ________________
+|                | |                |
+|    ________    | |    ________    |
+|   |        |   | |   |        |   |
+|   |        |   | |   |        |   |
+|   |        |   | |   |        |   |
+|   |______  |   | |   |______  |   |
+|          | |   | |          | |   |
+|__________| |   | |__________| |   |
+             |   |              |   |
+ ____________|   |  ____________|   |
+|                | |                |
+|________________| |________________|
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <base href="" target="_top" id="base">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no, user-scalable=no">
+  <title>GOG Games | Good Old Downloads</title>
+  <link rel="icon" type="image/png" href="static/img/favicon-16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="static/img/favicon-32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="static/img/favicon-96.png" sizes="96x96">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/style.css">
+  <meta name="theme-color" content="#6a4da5">
+</head>
+
+<body>
+	<div id="zerosearch-wrap"></div>
+  <header id="navbar">
+    <div class="container">
+      <div id="logo">
+        <a href="/" title="Home"><img src="static/img/logo.svg"></a>
+      </div>
+      <form id="search-bar" action="/search/" method="get">
+        <input name="s" autocomplete="off" placeholder="Search" type="search">
+        <button type="submit" id="search-btn">
+          <i class="fas fa-search fa-fw"></i>
+        </button>
+      </form>
+      <a href="/faq" id="faq">FAQ</a>
+    </div>
+  </header>
+<div class="container" id="main-shit">
+home page here asdf
+</div>
+<script id="game-template" type="x-template">
+  <div class="bg"></div>
+  <div id="game-details">
+    <div class="container index">
+        <h1>{{ game.title }} <a href="{{ game.url }}" target="_blank" title="Go to GOG Store"><i class="fas fa-shopping-cart"></i></a> <a href="https://www.gogdb.org/product/{{ game.id }}" target="_blank" title="Go to GOGDB"><i class="fas fa-database"></i></a></h1>
+        <div class="info"><a href="#">{{ game.category }}</a> | <a href="#">{{ game.developer }}</a></div>
+        <button class="btn blue toggle-links no-js-hide">DOWNLOAD</button>
+        <button class="btn green no-js-hide __vote-modal-trigger hidden" data-id="{{ game.id }}">VOTE FOR RE-UPLOAD</button>
+        <button class="btn toggle-changelog">CHANGELOG</button>
+        <div class="items-links-block">
+          {{#links}}
+            <div class="items-group">
+              <div class="title">Game Download Links</div>
+              {{#each GAME}}
+              <div class="item-expand-wrap">
+                <div class="open-all no-js-hide" title="Open all Links (Allow Popups)"><i class="fas fa-external-link-square-alt"></i></div>
+                <div class="clip no-js-hide" title="Copy Links to Clipboard"><i class="fas fa-copy"></i></div>
+                <label class="item" for="{{@key}}_game" title="{{name}}">
+                  <i class="fas fa-plus expand-icon" title="Show Download Links" data-toggled-text="Hide Download Links"></i>
+                  <img src="static/img/hoster_logos/{{@key}}.svg" class="fac-hoster">
+                  <span> {{name}}</span>
+                </label>
+                <input class="item-expand-check" id="{{@key}}_game" type="checkbox">
+                <div class="items-group expand">
+                  {{#this}}
+                    <a class="item" title="{{link}}" href="{{link}}" target="_blank">{{name}}</a>
+                  {{/this}}
+                </div>
+              </div>
+              {{/each}}
+            </div>
+            {{#if PATCHES}}
+            <div class="items-group">
+              <div class="title">Patch/Other Download Links</div>
+              {{#each PATCHES}}
+              <div class="item-expand-wrap">
+                <div class="open-all no-js-hide" title="Open all Links (Allow Popups)"><i class="fas fa-external-link-square-alt"></i></div>
+                <div class="clip no-js-hide" title="Copy Links to Clipboard"><i class="fas fa-copy"></i></div>
+                <label class="item" for="{{@key}}_patches" title="{{name}}">
+                  <i class="fas fa-plus expand-icon" title="Show Download Links" data-toggled-text="Hide Download Links"></i>
+                  <img src="static/img/hoster_logos/{{@key}}.svg" class="fac-hoster">
+                  <span> {{name}}</span>
+                </label>
+                <input class="item-expand-check" id="{{@key}}_patches" type="checkbox">
+                <div class="items-group expand">
+                  {{#this}}
+                    <a class="item" title="{{link}}" href="{{link}}" target="_blank">{{name}}</a>
+                  {{/this}}
+                </div>
+              </div>
+              {{/each}}
+            </div>
+            {{/if}}
+            {{#if GOODIES}}
+            <div class="items-group">
+              <div class="title">Goodies Download Links</div>
+              {{#each GOODIES}}
+              <div class="item-expand-wrap">
+                <div class="open-all no-js-hide" title="Open all Links (Allow Popups)"><i class="fas fa-external-link-square-alt"></i></div>
+                <div class="clip no-js-hide" title="Copy Links to Clipboard"><i class="fas fa-copy"></i></div>
+                <label class="item" for="{{@key}}_goodies" title="{{name}}">
+                  <i class="fas fa-plus expand-icon" title="Show Download Links" data-toggled-text="Hide Download Links"></i>
+                  <img src="static/img/hoster_logos/{{@key}}.svg" class="fac-hoster">
+                  <span> {{name}}</span>
+                </label>
+                <input class="item-expand-check" id="{{@key}}_goodies" type="checkbox">
+                <div class="items-group expand">
+                  {{#this}}
+                    <a class="item" title="{{link}}" href="{{link}}" target="_blank">{{name}}</a>
+                  {{/this}}
+                </div>
+              </div>
+              {{/each}}
+            </div>
+            {{/if}}
+          {{/links}}
+          {{^links}}
+            <div class="items-group">
+              {{#uploading}}
+                <div class="item">Game is currently uploading.</div>
+              {{/uploading}}
+              {{^uploading}}
+                <div class="item">Upload hasn't started yet.</div>
+              {{/uploading}}
+            </div>
+          {{/links}}
+        </div>
+        <div class="changelog"></div>
+        {{#files}}
+          <div class="items-group">
+            <div class="title">Game Items Included</div>
+            {{#GAME}}
+            <div class="item"><span class="filesize">{{size}}</span><span class="filename">{{name}}</span></div>
+            {{/GAME}}
+          </div>
+          {{#if PATCHES}}
+          <div class="items-group">
+            <div class="title">Patch/Other Items Included</div>
+            {{#PATCHES}}
+            <div class="item"><span class="filesize">{{size}}</span><span class="filename">{{name}}</span></div>
+            {{/PATCHES}}
+          </div>
+          {{/if}}
+          {{#if GOODIES}}
+          <div class="items-group">
+            <div class="title">Goodies Included</div>
+            {{#GOODIES}}
+            <div class="item"><span class="filesize">{{size}}</span><span class="filename">{{name}}</span></div>
+            {{/GOODIES}}
+          </div>
+          {{/if}}
+        {{/files}}
+        {{^files}}
+          <div class="items-group">
+            <div class="item">No files found.</div>
+          </div>
+        {{/files}}
+    </div>
+  </div>
+</script>
+<script src="static/js/ZeroFrame.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.3.0/fuse.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js"></script>
+<script>
+(function() {
+	class ZeroGod extends ZeroFrame {
+    loadPage(slug, addState){
+      var _this = this;
+      console.info(slug);
+      // Get json for game
+      this.cmd('fileGet', {inner_path: 'pages/'+slug+'.json', format: 'text'}, function(data) {
+      	if (data) {
+	      	data = JSON.parse(data);
+					_this.renderGame(data);
+	        if (addState) {
+	          _this.cmd('wrapperPushState', [{page: slug}, data.game.title+" | Good Old Downloads", slug]);
+	        }
+	        _this.cmd("wrapperSetTitle", data.game.title+" | Good Old Downloads");
+      	} else {
+      		console.info('404');
+      		// Show 404 if error
+      		document.getElementById('main-shit').innerHTML = '404';
+      	}
+      });
+    }
+
+    renderGame(data){
+    	// replace #main-shit with game
+    	// Migrate from mustache
+		  var template = document.getElementById('game-template').innerHTML;
+		  template = Handlebars.compile(template);
+    	document.getElementById('main-shit').innerHTML = template(data);
+    }
+
+    onRequest(cmd, message) {
+        if (cmd == "wrapperPopState") {
+          if (message.params.state) {
+          	console.log(message.params.state);
+            ZGod.loadPage(message.params.state.page, false);
+          }
+        } else {
+          this.log("Unknown request", message);
+        }
+    }
+    renderSearch(data) {
+      var output = '';
+      document.querySelector("#zerosearch-wrap").innerHTML = '';
+      for (var i = 0; i < data.length; i++) {
+        var game = data[i];
+        output += '<li><a class="zero-result" data-slug="'+game.slug+'" href="#">'+game.title+'</a></li>';
+      }
+      document.querySelector("#zerosearch-wrap").innerHTML = '<ul>'+output+'</ul>';
+    }
+	}
+
+	var ZGod = new ZeroGod();
+	var fuse, gamesJSON;
+
+	// Load games.json and store it in the gamesJSON variable
+  ZGod.cmd('fileGet', {inner_path: 'games.json', format: 'text'}, function(data) {
+    gamesJSON = JSON.parse(data);
+    fuse = new Fuse(gamesJSON, {
+      shouldSort: true,
+      threshold: 0.6,
+      location: 0,
+      distance: 50,
+      maxPatternLength: 32,
+      minMatchCharLength: 2,
+      keys: ["title"]
+    });
+  });
+
+  // If param is a game page then load it
+  var urlPath = window.location.search.replace(/(\?|&)wrapper_nonce.+/, '');
+  if (urlPath) {
+  	ZGod.loadPage(urlPath.replace('?',''), false);
+  }
+
+	// Override search bar
+  document.addEventListener('input', function(evt) {
+    if (evt.target.matches('#search-bar, #search-bar *')) {
+      evt.preventDefault();
+      evt.stopPropagation();
+      var searchBar = evt.target.closest('input[type="search"]');
+      searchResults = fuse.search(searchBar.value);
+      ZGod.renderSearch(searchResults.slice(0, 5));
+    }
+  });
+
+  document.addEventListener('click', function(evt) {
+  	// Links toggle button
+    if (evt.target.matches('.btn.toggle-links')) {
+    	document.querySelector('.items-links-block').classList.toggle('open');
+    }
+    // Clicking a game ffrom search
+    if (evt.target.matches('a.zero-result')) {
+    	evt.preventDefault();
+    	console.log(evt.target);
+    	ZGod.loadPage(evt.target.dataset.slug, true);
+      document.querySelector("#zerosearch-wrap").innerHTML = '';
+    }
+  });
+
+  // Hitting enter goes to first result
+  document.addEventListener('submit', function(evt) {
+    if (evt.target && evt.target.id === 'search-bar') {
+      evt.preventDefault();
+      evt.stopPropagation();
+      if (searchResults.length > 0) {
+        ZGod.loadPage(searchResults[0].slug, true);
+        document.querySelector("#zerosearch-wrap").innerHTML = '';
+      }
+    }
+  });
+}).call(this);
+</script>
+</body>
+</html>

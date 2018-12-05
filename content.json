@@ -1,0 +1,134 @@
+{
+ "address": "",
+ "address_index": 71966658,
+ "background-color": "#f9f9f9",
+ "cloneable": false,
+ "description": "",
+ "files": {
+  "LICENSE": {
+   "sha512": "ee8f5c488b90d6cae57476ebf0d0d047956760eb30538b83a20313dbaca96de1",
+   "size": 35072
+  },
+  "README": {
+   "sha512": "565375fe381105237e4512c70887687caa7bf1a2e6039e5652e338535433140d",
+   "size": 796
+  },
+  "games.json": {
+   "sha512": "5325266d5033ddb70f457bd927525a4a7ef7a04d95aae832109f21b6027ccee8",
+   "size": 124
+  },
+  "index.html": {
+   "sha512": "a00699c4ca0b66e2cd19bdc1178f0e4c1468cfcd5e714e054287447220299602",
+   "size": 12576
+  },
+  "pages/fallout_classic.json": {
+   "sha512": "c11128ff2c1fc91734b9f12f42fa8152eec664eb8aa37e5c3b359777e6176f0c",
+   "size": 1785
+  },
+  "pages/transistor.json": {
+   "sha512": "3bad8d9f289c018781b4c61648e4cd0a81990b24ba543d6719899737d3677f98",
+   "size": 2322
+  },
+  "static/css/_easings.scss": {
+   "sha512": "983482e97123a698f4110976cf9570779570bde960a89f307939192ec5c9b215",
+   "size": 1744
+  },
+  "static/css/_modal.scss": {
+   "sha512": "397442f3dc6ca2fa9fd578d0061ce8374bc31509aadbe4da648b1cd9203ba7d3",
+   "size": 1825
+  },
+  "static/css/_mq.scss": {
+   "sha512": "6338278c86181d6be46a4543ed334941effab2f15644471b7846bc73dabeb8bc",
+   "size": 9620
+  },
+  "static/css/_reboot.scss": {
+   "sha512": "d35f78576fabb984b08d5d0cb799501fe8ed3384a224b3806f1cd2f2ed9675fe",
+   "size": 12318
+  },
+  "static/css/_variables.scss": {
+   "sha512": "83c44c356b71d360ca63d83144d403a130322022513b6774378cb86eeba07874",
+   "size": 1364
+  },
+  "static/css/style.css": {
+   "sha512": "d9ef0c28866c441ea5949fd515f491d56de0de74f54cac3f5e50d82560cd769b",
+   "size": 43772
+  },
+  "static/css/style.css.map": {
+   "sha512": "4b5b01ce27849aff6127605b899d488230c6f33a38f0f86795a850df4bf2bd89",
+   "size": 19643
+  },
+  "static/css/style.scss": {
+   "sha512": "f0f7237e2a74042889239ed1d2a9ee3be3ca46edaaddb486377e8fc840cefb5f",
+   "size": 22717
+  },
+  "static/img/favicon-16.png": {
+   "sha512": "77e8ed3327ef2381c6e593dfade3759805339df5ee8f06cf1e45a7f86887d109",
+   "size": 1655
+  },
+  "static/img/favicon-32.png": {
+   "sha512": "cc720c457a000ef4f947ef29295e4f01b4f1df5ea924c4876cbd09f209bfdc3c",
+   "size": 1678
+  },
+  "static/img/favicon-96.png": {
+   "sha512": "724e2722c36df7fcb832891a2525272ee0b592f6237c35a1f973781cf951e179",
+   "size": 1863
+  },
+  "static/img/hoster_logos/1fichier.svg": {
+   "sha512": "4d6112584e482374d1ab393870fc202479acb0a9be00d9bc8f66e59cfd44337b",
+   "size": 2031
+  },
+  "static/img/hoster_logos/filescdn.svg": {
+   "sha512": "93f1dc025449d653ffa90a8f6b25fafb31950306bbd821a98caee491f59bfcb8",
+   "size": 2144
+  },
+  "static/img/hoster_logos/letsupload.svg": {
+   "sha512": "3415d7524a87c169abd8a2295f87eb3790a10977d1f6f8393c805f051e595229",
+   "size": 592
+  },
+  "static/img/hoster_logos/megaup.svg": {
+   "sha512": "26c85756e027188682a571267e57d6ff71e2662cad4b9f6af81a663c4370d258",
+   "size": 425
+  },
+  "static/img/hoster_logos/openload.svg": {
+   "sha512": "0651c2ca169e9d9ee2664dea52c45c85f285e16e83f8440ea48986c870c2a065",
+   "size": 652
+  },
+  "static/img/hoster_logos/shareonline.svg": {
+   "sha512": "e43d7d0750b961a78b6a30f22a8464f442b7ccfa36f6d994cf0a35f14156a48e",
+   "size": 840
+  },
+  "static/img/hoster_logos/uploaded.svg": {
+   "sha512": "cde62e5ab7b5535ed6229c3f4bd14d02f19234b4d3b283d686da5c066e6eddc9",
+   "size": 344
+  },
+  "static/img/hoster_logos/uploadhaven.svg": {
+   "sha512": "593a22b676cd5e17bac54eee5f880859698a3fe46d9c80f4c14c9f10c21bfc83",
+   "size": 1220
+  },
+  "static/img/hoster_logos/uptobox.svg": {
+   "sha512": "a7d2fe76a6e3d8084ed81ca8231709b99fa79ae0008ff5113e831440cbddf059",
+   "size": 329
+  },
+  "static/img/hoster_logos/zippyshare.svg": {
+   "sha512": "1a14ad836517fded4777eacca7bf828ef9caa1fd9fb4e60b9a01f7df8846b843",
+   "size": 322
+  },
+  "static/img/logo.svg": {
+   "sha512": "3205a8697f8ac4984c0be917c6ffafc7bd4bc332204158d275ec397ae8177775",
+   "size": 210
+  },
+  "static/js/ZeroFrame.js": {
+   "sha512": "42125c7aa72496455e044e3fd940e0f05db86824c781381edb7a70f71a5f0882",
+   "size": 3370
+  }
+ },
+ "ignore": "",
+ "inner_path": "content.json",
+ "postmessage_nonce_security": true,
+ "signers_sign": "",
+ "signs": {},
+ "signs_required": 1,
+ "title": "GOG Games | Good Old Downloads",
+ "translate": ["js/all.js"],
+ "zeronet_version": "0.6.4"
+}

@@ -1,0 +1,100 @@
+{
+  "game":{
+    "id":1429612159,
+    "title":"Transistor",
+    "slug":"transistor",
+    "url":"https://www.gog.com/game/transistor",
+    "release_date":1400533200,
+    "developer":"Supergiant Games",
+    "publisher":"Supergiant Games",
+    "category":"Action"
+  },
+  "links":{
+    "GAME":{
+      "openload":[
+        {
+          "link":"http://example.com",
+          "name":"transistor-2018-Sep-03-2151.part1.rar"
+        },
+        {
+          "link":"http://example.com",
+          "name":"transistor-2018-Sep-03-2151.part2.rar"
+        },
+        {
+          "link":"http://example.com",
+          "name":"transistor-2018-Sep-03-2151.part3.rar"
+        }
+      ],
+      "zippyshare":[
+        {
+          "link":"http://example.com",
+          "name":"transistor-2018-Sep-03-2151.part1.rar"
+        },
+        {
+          "link":"http://example.com",
+          "name":"transistor-2018-Sep-03-2151.part2.rar"
+        },
+        {
+          "link":"http://example.com",
+          "name":"transistor-2018-Sep-03-2151.part3.rar"
+        }
+      ]
+    },
+    "PATCHES":{
+      "openload":[
+        {
+          "link":"http://example.com",
+          "name":"transistor_patch-2018-Sep-03-2151.rar"
+        }
+      ]
+    },
+    "GOODIES":{
+      "openload":[
+        {
+          "link":"http://example.com",
+          "name":"transistor_goodies-2018-Sep-03-2151.part1.rar"
+        },
+        {
+          "link":"http://example.com",
+          "name":"transistor_goodies-2018-Sep-03-2151.part2.rar"
+        },
+        {
+          "link":"http://example.com",
+          "name":"transistor_goodies-2018-Sep-03-2151.part3.rar"
+        }
+      ]
+    }
+  },
+  "files":{
+    "GAME":[
+      {
+        "name":"setup_transistor_1.50440.8123_(23298)-1.bin",
+        "size":"2.59 GB"
+      },
+      {
+        "name":"setup_transistor_1.50440.8123_(23298).exe",
+        "size":"922.69 KB"
+      }
+    ],
+    "PATCHES":[
+      {
+        "name":"patch_transistor_0.10113_(18323)_to_1.50440.8123_(23298).exe",
+        "size":"4.83 MB"
+      }
+    ],
+    "GOODIES":[
+      {
+        "name":"transistor_ost_extended_flac.zip",
+        "size":"933.2 MB"
+      },
+      {
+        "name":"transistor_wallpapers.zip",
+        "size":"5.13 MB"
+      },
+      {
+        "name":"transistor_ost_mp3.zip",
+        "size":"181.26 MB"
+      }
+    ]
+  }
+}
